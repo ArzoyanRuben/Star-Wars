@@ -4,15 +4,13 @@ import { useNavigate } from "react-router-dom";
 import { CardActionArea, Card, CardContent, Typography } from "@mui/material";
 
 import { CardListWrapper } from "./styles";
-import { IVehicle } from "../../APIResponseTypes";
+import { IVehicle } from "../../@types/vehicle_types";
 
 interface Iprops {
   itemList: IVehicle[];
-  showItems?: Function;
-  changeType?: Function;
 }
 
-export function CardList(props: Iprops) {
+export default function CardList(props: Iprops) {
   const { itemList } = props;
   const navigate = useNavigate();
 

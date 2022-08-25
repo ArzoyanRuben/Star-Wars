@@ -4,7 +4,7 @@ import { ListItemText, Divider, ListItem, List } from "@mui/material";
 
 import { CardWrapper } from "./styles";
 
-export default function Cart({
+export default function Card({
   title,
   subtitle,
   withoutBorder,

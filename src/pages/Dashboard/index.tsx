@@ -2,14 +2,16 @@ import { FunctionComponent, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 
-import { CardList } from "../../components/CardList";
-import { Loader } from "../../components/Loader";
-import { NoData } from "../../components/NoData";
-import { MainPagination } from "../../components/Pagination";
-import Search from "../../components/Search/Search";
 import { useAppSelector } from "../../store";
-
 import { vehicleOp, vehicleSel } from "../../store/vehicle/index";
+
+import {
+  NoData,
+  MainPagination,
+  Search,
+  CardList,
+  Loader,
+} from "../../components";
 
 const Dashboard: FunctionComponent = () => {
   const dispatch = useDispatch();
@@ -23,7 +25,7 @@ const Dashboard: FunctionComponent = () => {
   const search = searchParams.get("search");
 
   useEffect(() => {
-    dispatch(vehicleOp.getVehiclesDataAsync({ page, search }));
+    dispatch(vehicleOp.getVehicleListDataAsync({ page, search }));
   }, [page, search]);
 
   return isLoading || !data ? (

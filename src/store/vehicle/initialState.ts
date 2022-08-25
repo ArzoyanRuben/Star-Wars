@@ -1,4 +1,4 @@
-import { IVehicleState } from "../../APIResponseTypes";
+import { IVehicleState } from "../../@types/vehicle_types";
 
 export function initialVehicleState(): IVehicleState {
     return {

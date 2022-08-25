@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
-import { IVehicleState } from "../../APIResponseTypes";
+import { IVehicleState } from "../../@types/vehicle_types";
 
 const vehicleSelector = (state: { vehicle: IVehicleState }) => state.vehicle;
 

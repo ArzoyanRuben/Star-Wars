@@ -1,12 +1,10 @@
-
-
 import { vehicleSlice } from "./vehicleSlicer";
 
 const { setError, setVehicleData, setVehiclesData, setIsLoadingData } = vehicleSlice.actions;
 
-const getVehiclesDataAsync = ({ page, search }: { page?: null | string; search?: null | string }) => async (dispatch: Function) => {
+const getVehicleListDataAsync = ({ page, search }: { page?: null | string; search?: null | string }) => async (dispatch: Function) => {
     try {
-        let url: string = "https://swapi.dev/api/vehicles";
+        let url = "https://swapi.dev/api/vehicles";
         if (page) {
             url += `/?page=${page}`
         }
@@ -59,7 +57,6 @@ const changeVehicleProfileData = (data: any) => (dispatch: Function) => {
 };
 
 
-
 const catchError = (error: any) => (dispatch: Function) => {
     dispatch(setError(error));
 };
@@ -73,5 +70,5 @@ export default {
     changeVehicleProfileData,
     catchError,
     removeVehicleData,
-    getVehiclesDataAsync
+    getVehicleListDataAsync,
 };

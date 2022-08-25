@@ -3,15 +3,13 @@ import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 
 import UndoIcon from "@mui/icons-material/Undo";
-import { Typography } from "@mui/material";
-import { IconButton } from "@mui/material";
+import { Typography, IconButton } from "@mui/material";
 
 import { vehicleOp, vehicleSel } from "../../store/vehicle/index";
-import { CardWrapper } from "./styles";
-import Cart from "../../components/Card";
-import { Loader } from "../../components/Loader";
 import { useAppSelector } from "../../store";
-import { NoData } from "../../components/NoData";
+
+import { CardWrapper } from "./styles";
+import { Card, Loader, NoData } from "../../components";
 
 const SingleItemPage: FunctionComponent = () => {
   const navigate = useNavigate();
@@ -57,12 +55,12 @@ const SingleItemPage: FunctionComponent = () => {
                 {data.name}
               </Typography>
               <div>
-                <Cart title={"model"} subtitle={data.model} />
-                <Cart title={"Class"} subtitle={data.vehicle_class} />
-                <Cart title={"Manufacturer"} subtitle={data.manufacturer} />
-                <Cart title={"Consumables"} subtitle={data.consumables} />
-                <Cart title={"Passengers"} subtitle={data.passengers} />
-                <Cart title={"Crew"} subtitle={data.crew} withoutBorder />
+                <Card title={"model"} subtitle={data.model} />
+                <Card title={"Class"} subtitle={data.vehicle_class} />
+                <Card title={"Manufacturer"} subtitle={data.manufacturer} />
+                <Card title={"Consumables"} subtitle={data.consumables} />
+                <Card title={"Passengers"} subtitle={data.passengers} />
+                <Card title={"Crew"} subtitle={data.crew} withoutBorder />
               </div>
             </div>
           )}

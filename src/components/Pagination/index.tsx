@@ -5,11 +5,11 @@ import { Link, useSearchParams } from "react-router-dom";
 import { PaginationItem, Pagination } from "@mui/material";
 import { PaginationWrapper } from "./styles";
 
-interface Iprops {
+interface IProps {
   dataCount: number;
 }
 
-export function MainPagination(props: Iprops) {
+export default function MainPagination(props: IProps) {
   const { dataCount } = props;
   const [searchParams] = useSearchParams();
 

@@ -1,5 +1,6 @@
+import Dashboard from "./Dashboard";
+import VehiclePage from "./SingleItemPage";
 
-import MainPage from "./Dashboard";
-import VehiclePage from "./SingleItemPage"
 
-export { VehiclePage, MainPage };
+
+export { Dashboard, VehiclePage };

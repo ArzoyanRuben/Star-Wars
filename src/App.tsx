@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { MainPage, VehiclePage } from "./pages/index";
+import { Dashboard, VehiclePage } from "./pages";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/Dashboard" element={<MainPage />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/vehicles/:id" element={<VehiclePage />} />
-        <Route path="*" element={<MainPage />} />
+        <Route path="*" element={<Dashboard />} />
       </Routes>
     </Router>
   );
