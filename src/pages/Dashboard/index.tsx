@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 
 import { useAppSelector } from "../../store";
-import { vehicleOp, vehicleSel } from "../../store/vehicle/index";
+import { vehicleOp, vehicleSel } from "../../store/vehicle";
 
 import {
   NoData,

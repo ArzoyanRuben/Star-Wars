@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import UndoIcon from "@mui/icons-material/Undo";
 import { Typography, IconButton } from "@mui/material";
 
-import { vehicleOp, vehicleSel } from "../../store/vehicle/index";
+import { vehicleOp, vehicleSel } from "../../store/vehicle";
 import { useAppSelector } from "../../store";
 
 import { CardWrapper } from "./styles";
