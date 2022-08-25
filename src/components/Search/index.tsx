@@ -10,7 +10,7 @@ export function Search() {
   const navigate = useNavigate();
   const handler = useRef<ReturnType<typeof setTimeout>>(0);
 
-  const search: string | null = searchParams.get("search");
+  const search = searchParams.get("search");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value: string = event.target.value;

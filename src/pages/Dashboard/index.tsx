@@ -13,7 +13,7 @@ import {
   Loader,
 } from "../../components";
 
-const Dashboard: FunctionComponent = () => {
+function Dashboard() {
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
 
@@ -28,9 +28,11 @@ const Dashboard: FunctionComponent = () => {
     dispatch(vehicleOp.getVehicleListDataAsync({ page, search }));
   }, [page, search]);
 
-  return isLoading || !data ? (
-    <Loader />
-  ) : (
+  if (isLoading || !data) {
+    return <Loader />;
+  }
+
+  return (
     <div>
       <Search />
       {!data.length ? (
@@ -43,6 +45,6 @@ const Dashboard: FunctionComponent = () => {
       )}
     </div>
   );
-};
+}
 
 export default Dashboard;

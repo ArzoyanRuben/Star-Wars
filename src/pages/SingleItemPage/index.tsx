@@ -11,7 +11,7 @@ import { useAppSelector } from "../../store";
 import { CardWrapper } from "./styles";
 import { Card, Loader, NoData } from "../../components";
 
-const SingleItemPage: FunctionComponent = () => {
+function SingleItemPage() {
   const navigate = useNavigate();
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -26,9 +26,11 @@ const SingleItemPage: FunctionComponent = () => {
     };
   }, []);
 
-  return !data ? (
-    <Loader />
-  ) : (
+  if (!data) {
+    return <Loader />;
+  }
+
+  return (
     <CardWrapper>
       <div className="single-item">
         <div className="back-button">
@@ -68,6 +70,6 @@ const SingleItemPage: FunctionComponent = () => {
       </div>
     </CardWrapper>
   );
-};
+}
 
 export default SingleItemPage;

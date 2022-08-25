@@ -7,6 +7,7 @@ export const CardListWrapper = styled.div`
   flex-wrap: wrap;
   margin: 24px;
   padding: 24px;
+
   .item-card {
     flex-grow: 6;
     margin: 10px 24px;
